@@ -17,9 +17,11 @@ public class PanelForm extends javax.swing.JFrame {
     /**
      * Creates new form PanelForm
      */
-    Pattern patNombre = Pattern.compile("[[A-Z][a-z][ÁÉÚÓÍáéúóíñÑ]\\s]+");;
-    Pattern patEdad = Pattern.compile("(1[8-9])|(2[0-5])");;
-    Pattern patCorreo = Pattern.compile("[].[[hotmail,s]]");;
+    Pattern patNombre = Pattern.compile("[[A-Z][a-z][ÁÉÚÓÍáéúóíñÑ]\\s]+");
+    ;
+    Pattern patEdad = Pattern.compile("(1[8-9])|(2[0-5])");
+
+    Pattern patCorreo = Pattern.compile("[A-Za-z0-9._%+-]+@(teziutlan.tecnm.mx|(gmail|hotmail).com)");
 
     public PanelForm() {
         initComponents();
@@ -130,7 +132,6 @@ public class PanelForm extends javax.swing.JFrame {
             if (!compCorreo) {
                 JOptionPane.showMessageDialog(rootPane, "Correo invalido");
             }
-            return;
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
